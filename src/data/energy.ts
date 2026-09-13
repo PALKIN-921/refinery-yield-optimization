@@ -1,0 +1,50 @@
+export const energyConsumption = [
+  {
+    utility: 'Steam',
+    value: '1,245',
+    unit: 'T/hr',
+    target: '1,300',
+    trend: -3.25,
+    iconColor: 'bg-orange-500',
+    icon: 'flame',
+  },
+  {
+    utility: 'Power',
+    value: '28.65',
+    unit: 'MW',
+    target: '30.00',
+    trend: -2.18,
+    iconColor: 'bg-green-500',
+    icon: 'zap',
+  },
+  {
+    utility: 'Hydrogen',
+    value: '8,420',
+    unit: 'Nm³/hr',
+    target: '8,800',
+    trend: -1.78,
+    iconColor: 'bg-blue-500',
+    icon: 'wind',
+  },
+  {
+    utility: 'Fuel Oil',
+    value: '--',
+    unit: '--',
+    target: '--',
+    trend: 0,
+    iconColor: 'bg-amber-500',
+    icon: 'droplet',
+  },
+];
+
+export const energyTrendData = [
+  { time: '00:00', steam: 1200, power: 27.5, hydrogen: 8200, fuelGas: 15000 },
+  { time: '03:00', steam: 1180, power: 28.0, hydrogen: 8300, fuelGas: 15200 },
+  { time: '06:00', steam: 1220, power: 29.0, hydrogen: 8400, fuelGas: 15500 },
+  { time: '09:00', steam: 1250, power: 28.5, hydrogen: 8500, fuelGas: 15800 },
+  { time: '12:00', steam: 1280, power: 29.5, hydrogen: 8600, fuelGas: 16200 },
+  { time: '15:00', steam: 1300, power: 30.0, hydrogen: 8700, fuelGas: 16500 },
+  { time: '18:00', steam: 1260, power: 29.0, hydrogen: 8550, fuelGas: 16000 },
+  { time: '21:00', steam: 1240, power: 28.5, hydrogen: 8450, fuelGas: 15600 },
+  { time: '24:00', steam: 1220, power: 28.0, hydrogen: 8350, fuelGas: 15300 },
+];
