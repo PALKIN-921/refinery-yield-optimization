@@ -4,13 +4,6 @@ import {
   Home,
   BarChart3,
   FlaskConical,
-  SlidersHorizontal,
-  Wallet,
-  Box,
-  Zap,
-  FileText,
-  Bell,
-  Database,
   Settings,
   ChevronLeft,
   ChevronRight,
@@ -50,6 +43,7 @@ export default function Sidebar() {
         <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center flex-shrink-0">
           <span className="text-white font-bold text-xs">IO</span>
         </div>
+
         <AnimatePresence>
           {!collapsed && (
             <motion.div
@@ -58,8 +52,12 @@ export default function Sidebar() {
               exit={{ opacity: 0, width: 0 }}
               className="overflow-hidden"
             >
-              <h2 className="text-white font-semibold text-sm leading-tight">Indian Oil</h2>
-              <p className="text-white/50 text-[10px]">The Energy of India</p>
+              <h2 className="text-white font-semibold text-sm leading-tight">
+                Indian Oil
+              </h2>
+              <p className="text-white/50 text-[10px]">
+                The Energy of India
+              </p>
             </motion.div>
           )}
         </AnimatePresence>
@@ -74,15 +72,23 @@ export default function Sidebar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <h1 className="text-white font-bold text-lg tracking-wide">RYOOT</h1>
+              <h1 className="text-white font-bold text-lg tracking-wide">
+                RYOOT
+              </h1>
+
               <p className="text-white/50 text-[11px] leading-tight mt-0.5">
-                Refinery Yield<br/>Optimization Tool
+                Refinery Yield
+                <br />
+                Optimization Tool
               </p>
             </motion.div>
           )}
         </AnimatePresence>
+
         {collapsed && (
-          <div className="text-center text-orange-500 font-bold text-lg">R</div>
+          <div className="text-center text-orange-500 font-bold text-lg">
+            R
+          </div>
         )}
       </div>
 
@@ -92,11 +98,14 @@ export default function Sidebar() {
           <div key={item.path}>
             {collapsed ? (
               <button
-                onClick={() => window.location.href = item.path}
+                onClick={() => {
+                  window.location.href = item.path;
+                }}
                 className="w-full flex justify-center py-2.5 rounded-lg text-white/70 hover:text-white hover:bg-navy-800 transition-colors relative"
                 title={item.label}
               >
                 {item.icon}
+
                 {item.badge > 0 && (
                   <span className="absolute top-1 right-1 w-4 h-4 bg-red-500 rounded-full text-[10px] text-white flex items-center justify-center">
                     {item.badge}
@@ -120,7 +129,11 @@ export default function Sidebar() {
         onClick={() => setCollapsed(!collapsed)}
         className="absolute -right-3 top-20 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white shadow-md hover:bg-orange-600 transition-colors z-10"
       >
-        {collapsed ? <ChevronRight size={14} /> : <ChevronLeft size={14} />}
+        {collapsed ? (
+          <ChevronRight size={14} />
+        ) : (
+          <ChevronLeft size={14} />
+        )}
       </button>
     </motion.aside>
   );
